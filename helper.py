@@ -216,6 +216,10 @@ def play_stored_video(conf, model):
         video_bytes = video_file.read()
     if video_bytes:
         st.video(video_bytes)
+        videodet= open("videos/detectedcow.mp4","rb")
+        videodet1=videodet.read()
+        st.video(videodet1)
+        
 
     if st.sidebar.button('Detect Video Objects'):
         try:
